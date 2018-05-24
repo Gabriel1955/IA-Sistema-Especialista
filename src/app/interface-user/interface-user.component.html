@@ -1,0 +1,12 @@
+<div class="center">
+  <legend>Click no sintoma</legend>
+  <div *ngFor="let premissa of premissas">
+    <h4 *ngIf="premissa.type=='p'"  (click)="initMachine(premissa.Expressao)">{{premissa.Significado}}</h4>
+  </div>
+</div>
+<div class="center" *ngIf="conclutions.length>0">
+  <legend>Conclusões</legend>
+  <div *ngFor="let conclution of conclutions">
+    <h4 *ngIf="conclution.value" >  {{conclution.sentenca}}, {{conclution.grau_certeza}}% de certeza</h4>
+  </div>
+</div>
